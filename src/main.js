@@ -24,6 +24,10 @@ const client = new Client({
 client.on("ready", () => {
 	console.log("Logged in as", client.user.tag);
 
+	console.log("--- Banned users ---");
+	config.users.forEach((user) => console.log(user));
+	console.log("--------------------");
+
 	client.guilds.fetch().then((guilds) => {
 		guilds.forEach(async (guild) => {
 			guild.fetch().then((guild) => {
