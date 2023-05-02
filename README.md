@@ -6,9 +6,7 @@ Silent ban is a Discord bot that allows you to automaticly kick a user, when the
 
 ## How to use
 
-- Create a environment variable called "TOKEN" that contains the bot token
-- Create a file in the same folder as the package.json called "config.json"
-- Put following JSON in it:
+Create a environment variable called "TOKEN" that contains the bot token. Then create a file in the same folder as the package.json called "config.json" and put following JSON in it:
 
 ```json
 {
@@ -16,4 +14,4 @@ Silent ban is a Discord bot that allows you to automaticly kick a user, when the
 }
 ```
 
-- To silently ban a user just put their user id in the "users" array
+To silently ban a user just put their user id in the "users" array. Alternativly you can also define a environment variable called "BANNED_USERS" and put a JSON array in it
