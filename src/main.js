@@ -3,6 +3,20 @@ const { Client } = require("discord.js");
 
 const config = require("../config.json");
 
+if (process.env.BANNED_USERS) {
+	try {
+		if (!config.users) {
+			config.users = [];
+		}
+
+		JSON.parse(process.env.BANNED_USERS).forEach((id) => {
+			config.users.push(id);
+		});
+	} catch (err) {
+		console.log("Failed to load banned users from the environment variable\n", err);
+	}
+}
+
 const client = new Client({
 	intents: ["GuildMembers", "GuildModeration"],
 });
