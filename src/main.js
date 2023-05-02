@@ -59,5 +59,5 @@ client.login(process.env.TOKEN);
 
 function kickMember(member) {
 	member.kick();
-	console.log("Kicked user", member.id, `${member.user.tag}`, "from server", member.guild.id, `"${member.guild.name}"`);
+	console.log("Kicked user", member.id, `"${member.user.tag}"`, "from server", member.guild.id, `"${member.guild.name}"`);
 }
