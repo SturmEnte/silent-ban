@@ -1,0 +1,18 @@
+{
+	"name": "silent-ban",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/main.js",
+	"scripts": {
+		"test": "nodemon ."
+	},
+	"author": "SturmEnte",
+	"license": "GPL-3.0-only",
+	"devDependencies": {
+		"dotenv": "^16.0.3",
+		"nodemon": "^2.0.22"
+	},
+	"dependencies": {
+		"discord.js": "^14.10.2"
+	}
+}
