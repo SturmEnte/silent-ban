@@ -1,7 +1,13 @@
 require("dotenv/config");
 const { Client } = require("discord.js");
 
-const config = require("../config.json");
+let config = { users: [] };
+
+try {
+	config = require("../config.json");
+} catch (err) {
+	console.log("Failed to load config from file\n", err);
+}
 
 if (process.env.BANNED_USERS) {
 	try {
